@@ -1,6 +1,9 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+#pragma omp parallel num_threads(4)
+    {
+        std::cout << "Hello, World!" << std::endl;
+    }
     return 0;
 }
